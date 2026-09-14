@@ -1,0 +1,649 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* SCOPED ROOT TO PREVENT GLOBAL CSS LEAKAGE */
+.vertex-about-wrapper {
+  --vx-bg-main: #0B0B0F;
+  --vx-bg-secondary: #141419;
+  --vx-text-primary: #F4F4F6;
+  --vx-text-secondary: #9A9AA5;
+  --vx-accent: #38BDF8;
+  --vx-border: #2A2A32;
+
+  --vx-font: 'Poppins', sans-serif;
+
+  background-color: var(--vx-bg-main);
+  color: var(--vx-text-primary);
+  font-family: var(--vx-font);
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.vertex-about-wrapper *,
+.vertex-about-wrapper *::before,
+.vertex-about-wrapper *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Vertex Tech Logo Editing */
+.vertex-logo{
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* CONTAINERS & SYSTEM SPACING */
+.vx-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.vx-section {
+  padding: 80px 0;
+  border-bottom: 1px solid var(--vx-border);
+}
+
+/* TYPOGRAPHY */
+.vx-h2 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--vx-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.vx-h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--vx-text-primary);
+}
+
+.vx-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--vx-accent);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.vx-body-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--vx-text-secondary);
+}
+
+/* BUTTONS */
+.vx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.vx-btn--primary {
+  background-color: var(--vx-accent);
+  color: #0B0B0F;
+  border: 1px solid var(--vx-accent);
+}
+
+.vx-btn--primary:hover {
+  background-color: #22a7e2;
+  border-color: #22a7e2;
+}
+
+.vx-btn--secondary {
+  background-color: transparent;
+  color: var(--vx-text-primary);
+  border: 1px solid var(--vx-border);
+}
+
+.vx-btn--secondary:hover {
+  border-color: var(--vx-text-primary);
+}
+
+/* HERO */
+.vx-hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 96px 0 64px;
+  border-bottom: 1px solid var(--vx-border);
+}
+
+.vx-hero__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.vx-hero__title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 16px 0 24px;
+  letter-spacing: -0.03em;
+}
+
+.vx-accent-text {
+  color: var(--vx-accent);
+}
+
+.vx-hero__desc {
+  font-size: 17px;
+  color: var(--vx-text-secondary);
+  max-width: 540px;
+  margin-bottom: 48px;
+}
+
+.vx-hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.vx-hero__panel {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.vx-logo-svg {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 24px;
+}
+
+.vx-hero__panel-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--vx-border);
+  padding-top: 24px;
+  width: 100%;
+}
+
+.vx-meta-caption {
+  font-size: 12px;
+  color: var(--vx-accent);
+  letter-spacing: 0.08em;
+}
+
+.vx-meta-value {
+  font-size: 14px;
+  color: var(--vx-text-primary);
+  font-weight: 500;
+}
+
+/* EDITORIAL GRID */
+.vx-grid-editorial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.vx-body-lead {
+  font-size: 18px;
+  color: var(--vx-text-primary);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+
+/* SERVICES */
+.vx-services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.vx-service-card {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 12px;
+  padding: 32px;
+  box-sizing: border-box;
+  animation: 1s ease-in-out;
+}
+
+.vx-service-card:hover {
+  border: 1px solid var(--vx-accent);
+  box-sizing: border-box;
+}
+
+.vx-service-header {
+  margin-bottom: 16px;
+}
+
+.vx-service-idx {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vx-accent);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.vx-service-desc {
+  font-size: 15px;
+  color: var(--vx-text-secondary);
+}
+
+/* MISSION & VISION */
+.vx-split-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.vx-card-block {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.vx-card:hover {
+  border: 1px solid var(--vx-accent);
+  box-sizing: border-box;
+}
+
+.vx-statement {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--vx-text-primary);
+  line-height: 1.6;
+}
+
+/* OUR GOAL TIMELINE */
+.vx-goal-sub {
+  color: var(--vx-text-secondary);
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.vx-goal-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.vx-goal-node {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vx-node-idx {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--vx-accent);
+}
+
+.vx-node-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--vx-text-primary);
+  margin-bottom: 8px;
+}
+
+.vx-node-desc {
+  font-size: 13px;
+  color: var(--vx-text-secondary);
+  line-height: 1.5;
+}
+
+/* WHAT MAKES US DIFFERENT */
+.vx-diff-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 48px;
+}
+
+.vx-diff-triad {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+}
+
+.vx-triad-item {
+  border-left: 2px solid var(--vx-accent);
+  padding-left: 16px;
+}
+
+.vx-triad-item strong {
+  display: block;
+  font-size: 16px;
+  color: var(--vx-text-primary);
+  margin-bottom: 4px;
+}
+
+.vx-triad-item p {
+  font-size: 14px;
+  color: var(--vx-text-secondary);
+}
+
+/* STATS */
+.vx-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.vx-stat-box {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.vx-stat-number {
+  display: block;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--vx-accent);
+  line-height: 1;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.vx-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--vx-text-secondary);
+}
+
+/* TEAM */
+.vx-team-header {
+  margin-bottom: 48px;
+}
+
+.vx-team-caption {
+  font-size: 15px;
+  color: var(--vx-text-secondary);
+  margin-top: 8px;
+}
+
+.vx-student-group {
+  margin-top: 80px;
+}
+
+/* LEADS GRID (4 Team Leads) */
+.vx-grid-leads {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.vx-lead-card {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+}
+
+.vx-avatar-slot {
+  width: 100%;
+  height: 140px;
+  background-color: var(--vx-bg-main);
+  border: 1px solid var(--vx-border);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vx-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.vx-avatar-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.vx-initials {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--vx-accent);
+}
+
+.vx-avatar-note {
+  font-size: 10px;
+  color: var(--vx-text-secondary);
+  margin-top: 6px;
+  line-height: 1.2;
+}
+
+.vx-lead-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.vx-lead-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--vx-text-primary);
+}
+
+.vx-badge-lead {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vx-accent);
+  background: rgba(56, 189, 248, 0.08);
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--vx-border);
+}
+
+.vx-specialization {
+  font-size: 13px;
+  color: var(--vx-accent);
+  margin-bottom: 12px;
+}
+
+.vx-lead-bio {
+  font-size: 14px;
+  color: var(--vx-text-secondary);
+  margin-bottom: 16px;
+}
+
+.vx-link {
+  font-size: 12px;
+  color: var(--vx-text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid var(--vx-border);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease;
+}
+
+.vx-link:hover {
+  border-color: var(--vx-accent);
+}
+
+/* STUDENTS GRID */
+.vx-grid-students {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.vx-student-card {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.vx-avatar-slot--student {
+  height: 160px;
+  margin-bottom: 16px;
+}
+
+.vx-student-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--vx-text-primary);
+  margin-bottom: 4px;
+}
+
+.vx-student-role {
+  font-size: 12px;
+  color: var(--vx-accent);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.vx-student-bio {
+  font-size: 13px;
+  color: var(--vx-text-secondary);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+
+.vx-social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.vx-icon-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vx-text-secondary);
+  text-decoration: none;
+  padding: 4px 6px;
+  border: 1px solid var(--vx-border);
+  border-radius: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.vx-icon-link:hover {
+  color: var(--vx-accent);
+  border-color: var(--vx-accent);
+}
+
+/* GLOBAL AMBITION */
+.vx-ambition-banner {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 64px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.vx-ambition-banner .vx-h2 {
+  margin-bottom: 24px;
+}
+
+.vx-ambition-body {
+  font-size: 16px;
+  color: var(--vx-text-secondary);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* FINAL CTA */
+.vx-cta-box {
+  background-color: var(--vx-bg-secondary);
+  border: 1px solid var(--vx-border);
+  border-radius: 16px;
+  padding: 64px 32px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.vx-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--vx-text-primary);
+  margin-bottom: 16px;
+}
+
+.vx-cta-text {
+  font-size: 16px;
+  color: var(--vx-text-secondary);
+  margin-bottom: 32px;
+}
+
+.vx-cta-box .vx-hero__actions {
+  justify-content: center;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1024px) {
+  .vx-hero__title { font-size: 44px; }
+  .vx-goal-flow { grid-template-columns: repeat(3, 1fr); }
+  .vx-grid-students { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .vx-hero__inner { grid-template-columns: 1fr; }
+  .vx-grid-editorial { grid-template-columns: 1fr; }
+  .vx-services-grid { grid-template-columns: 1fr; }
+  .vx-split-cards { grid-template-columns: 1fr; }
+  .vx-goal-flow { grid-template-columns: 1fr; }
+  .vx-diff-panel { grid-template-columns: 1fr; }
+  .vx-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .vx-grid-leads { grid-template-columns: 1fr; }
+  .vx-grid-students { grid-template-columns: repeat(2, 1fr); }
+  .vx-lead-card { grid-template-columns: 1fr; }
+  .vx-avatar-slot { height: 180px; }
+  .vx-h2 { font-size: 26px; }
+  .vx-hero__title { font-size: 36px; }
+}
+
+@media (max-width: 480px) {
+  .vx-stats-grid { grid-template-columns: 1fr; }
+  .vx-grid-students { grid-template-columns: 1fr; }
+}
