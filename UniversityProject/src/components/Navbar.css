@@ -1,0 +1,23 @@
+nav {
+  background-color: black;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: lightblue;
+}
+
+nav a.active {
+  color: blue;
+}
