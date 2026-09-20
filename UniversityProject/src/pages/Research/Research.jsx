@@ -39,6 +39,7 @@ const advisors = [
   {
     name: 'Dr. Muhammad Furqan',
     initials: 'MF',
+    image:'/images/advisors/sirfurqan.png',
     title: 'Assistant Professor, Air University Aerospace & Aviation Campus',
     bio: 'PhD in Information & Communication Engineering, Southeast University, China. Specializes in IoT, information-centric networks, and next-generation cellular networks.',
     tags: ['IoT', 'Network Engineering', 'Web Engineering', 'Research Skills'],
@@ -46,6 +47,7 @@ const advisors = [
   {
     name: 'Dr. Syed Saqib Raza',
     initials: 'SR',
+    image:'/images/advisors/Dr-SAQIB-Photo.png',
     title: 'Assistant Professor, Air University Aerospace & Aviation Campus',
     bio: 'PhD in Computer Science (Artificial Intelligence), with 14+ years of academic and research experience across intelligent computing.',
     tags: ['Artificial Intelligence', 'Machine Learning', 'NLP', 'Generative AI'],
@@ -53,31 +55,35 @@ const advisors = [
   {
     name: 'Dr. Tufail Muhammad',
     initials: 'TM',
+    image:'/images/advisors/sirtufail.jpg',
     title: 'Assistant Professor, Air University Aerospace & Aviation Campus',
     bio: 'PhD in Computer System Engineering, GIKI (HEC-funded). Focuses on machine learning, data mining, optimization, and information visualization.',
     tags: ['Machine Learning', 'Data Mining', 'Optimization', 'Info Visualization'],
   },
   {
-    name: 'Sir Saud',
-    initials: 'S',
-    title: 'Research Advisor',
-    bio: '',
-    tags: [],
-  },
-  {
-    name: 'Sir Imran Qureshi',
-    initials: 'IQ',
-    title: 'Visiting Professor, Robotics & Automation',
-    bio: '',
-    tags: [],
-  },
-  {
-    name: 'Sir Hammad Shah',
-    initials: 'HS',
-    title: 'Senior Lecturer, Data Science & Analytics',
-    bio: '',
-    tags: [],
-  },
+  name: 'Dr. Muhammad Saud Khan',
+  initials: 'MS',
+  image:'/images/advisors/sir-saud.png',
+  title: 'Assistant Professor & Head of Department, Computer Science, Air University Aerospace & Aviation Campus',
+  bio: 'PhD in Cybersecurity, with expertise spanning embedded systems, IoT, and Internet-of-Drones (IoD) security. Leads funded research in cybersecurity and smart systems, and serves as an editor/reviewer for IEEE Access and Elsevier journals.',
+  tags: ['Cybersecurity', 'IoT Security', 'Digital Forensics', 'Machine Learning'],
+},
+{
+  name: 'Sir Imran Qureshi',
+  initials: 'IQ',
+  image:'/images/advisors/Sirimran.webp',
+  title: 'Visiting Professor, Robotics & Automation',
+  bio: 'Specializes in human-robot collaboration and safe automation systems, with a focus on designing machines that work reliably alongside people in lab and industrial environments. Brings hands-on industry experience to applied robotics research and mentorship.',
+  tags: ['Robotics', 'Automation', 'Human-Robot Interaction', 'Embedded Systems'],
+},
+{
+  name: 'Sir Hammad Shah',
+  initials: 'HS',
+  image:'/images/advisors/SirHammad.webp',
+  title: 'Senior Lecturer, Data Science & Analytics',
+  bio: 'Focuses on extracting insight from large, complex datasets through statistical modeling and applied analytics. Works on data-driven decision-making frameworks with real-world applications across research and industry contexts.',
+  tags: ['Data Science', 'Statistical Modeling', 'Data Analytics', 'Predictive Modeling'],
+},
 ];
 
 const featuredProjects = [
@@ -140,14 +146,16 @@ export default function Research() {
   return (
     <div className="research-page">
       <section className="research-hero">
-        <p className="research-eyebrow">Research</p>
-        <h1 className="research-hero-title">Where questions turn into evidence.</h1>
-        <p className="research-hero-sub">
-          Our faculty and students investigate problems across engineering, health,
-          computing, and society — work that starts in the lab and ends up changing
-          how people live.
-        </p>
-      </section>
+  <div className="research-hero-inner">
+    <p className="research-eyebrow">Research</p>
+    <h1 className="research-hero-title">Where questions turn into evidence.</h1>
+    <p className="research-hero-sub">
+      Our faculty and students investigate problems across engineering, health,
+      computing, and society — work that starts in the lab and ends up changing
+      how people live.
+    </p>
+  </div>
+</section>
 
       <RevealSection className="research-stats">
         {stats.map((stat) => (
@@ -171,11 +179,17 @@ export default function Research() {
       </RevealSection>
 
       <RevealSection className="research-advisors">
-        <h2 className="section-title">Guided by</h2>
+        <h2 className="section-title">Advisory Board</h2>
         <div className="advisor-grid">
           {advisors.map((advisor) => (
             <div className="advisor-card" key={advisor.name}>
-              <div className="advisor-avatar">{advisor.initials}</div>
+              <div className="advisor-avatar">
+                {advisor.image ? (
+                  <img src={advisor.image} alt={advisor.name} className="advisor-avatar-img" />
+                ) : (
+                  advisor.initials
+                )}
+              </div>
               <h3 className="advisor-name">{advisor.name}</h3>
               <p className="advisor-role">{advisor.title}</p>
               {advisor.bio && <p className="advisor-bio">{advisor.bio}</p>}
