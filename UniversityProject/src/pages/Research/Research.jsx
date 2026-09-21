@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import { useEffect, useRef } from 'react';
 import './Research.css';
 
@@ -239,14 +239,3 @@ export default function Research() {
     </div>
   );
 }
-=======
-import React from 'react'
-
-const Research = () => {
-  return (
-    <div>Research</div>
-  )
-}
-
-export default Research
->>>>>>> a7e2a40cd0c4eb545f9c410a19ff4f556df8fd77
