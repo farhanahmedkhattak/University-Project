@@ -1,9 +1,9 @@
 
-import AboutUs from './pages/AboutUs/AboutUs'
-import Home from './pages/HOME/Home'
-import Ai from './pages/AI/Ai'
-import Development from './pages/Development/Development'
-import Iot from './pages/IOT/IoT'
+import AboutUs from './pages/AboutUs'
+import Home from './pages/Home'
+import Ai from './pages/Ai'
+import Development from './pages/Development'
+import Iot from './pages/Iot'
 import Research from './pages/Research/Research'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
@@ -25,6 +25,7 @@ import './App.css'
       </Routes>
     </Router>
   )
+
 }
 
 export default App

@@ -1,4 +1,5 @@
-import React from 'react'
+
+import 'react'
 
 const Development = () => {
   return (
@@ -6,4 +7,6 @@ const Development = () => {
   )
 }
 
+
 export default Development
+

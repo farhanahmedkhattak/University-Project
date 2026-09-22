@@ -1,4 +1,5 @@
-import React from 'react'
+
+import 'react'
 
 const Iot = () => {
   return (
@@ -7,3 +8,4 @@ const Iot = () => {
 }
 
 export default Iot
+

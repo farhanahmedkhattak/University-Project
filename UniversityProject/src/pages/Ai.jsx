@@ -1,4 +1,5 @@
-import React from 'react'
+
+import 'react'
 
 const Ai = () => {
   return (
@@ -6,4 +7,6 @@ const Ai = () => {
   )
 }
 
+
 export default Ai
+
