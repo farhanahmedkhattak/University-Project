@@ -1,15 +1,13 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import AboutPage from "./pages/AboutUs/AboutPage";
+import Navbar from './components/Navbar';
 import Home from './pages/HOME/Home';
+import AboutPage from './pages/AboutUs/AboutPage';
 import Ai from './pages/AI/Ai';
 import Development from './pages/Development/Development';
 import Iot from './pages/IOT/IoT';
 import Research from './pages/Research/Research';
-
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import Navbar from './components/Navbar';
 
 import './App.css';
 
