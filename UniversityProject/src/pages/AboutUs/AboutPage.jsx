@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { renderAboutMarkup } from '../../features/about/aboutTemplate.js';
 import { initAboutAnimations } from '../../features/about/aboutAnimations.js';
-import '../features/about/aboutStyles.css';
+import "../../features/about/aboutStyles.css";
 
 export default function AboutPage() {
   const containerRef = useRef(null);

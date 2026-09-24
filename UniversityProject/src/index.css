@@ -43,8 +43,6 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-<<<<<<< HEAD
-=======
 }
 h2 {
   font-size: 24px;
@@ -72,5 +70,4 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
->>>>>>> ef78b88dbcaeecb464d74a9281a3767425e70a56
 }
