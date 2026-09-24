@@ -1,23 +1,169 @@
-nav {
-  background-color: black;
-  padding: 15px;
+/* ==========================================
+   VERTEX TECHNOLOGY - PREMIUM NAVBAR
+   ========================================== */
+
+/* Sticky Frosted Header Container */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(11, 11, 15, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(42, 42, 50, 0.8);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
-nav ul {
+/* Nav Alignment Box (Matches page 1180px width) */
+.nav-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 14px 24px;
   display: flex;
-  gap: 20px;
-  list-style: none;
+  align-items: center;
+  justify-content: space-between;
 }
 
-nav a {
-  color: white;
+/* --- BRAND LOGO --- */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
+  transition: transform 0.2s ease;
 }
 
-nav a:hover {
-  color: lightblue;
+.nav-logo:hover {
+  transform: translateY(-1px);
+}
+.logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(56, 189, 248, 0.25), rgba(56, 189, 248, 0.05));
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38BDF8;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
 }
 
-nav a.active {
-  color: blue;
+
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #F4F4F6;
+  letter-spacing: -0.02em;
+}
+
+.logo-highlight {
+  color: #38BDF8;
+  font-weight: 400;
+}
+
+/* --- CENTER NAVIGATION LINKS --- */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  background: rgba(20, 20, 25, 0.6);
+  border: 1px solid rgba(42, 42, 50, 0.7);
+  border-radius: 100px;
+}
+
+.nav-menu li a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 18px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #9A9AA5;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: all 0.25s ease;
+}
+
+/* Hover state */
+.nav-menu li a:hover {
+  color: #F4F4F6;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* Active page link with cyan glow badge */
+.nav-menu li a.active {
+  color: #38BDF8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-weight: 600;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.15);
+}
+
+/* Active subtle dot indicator */
+.nav-menu li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  background: #38BDF8;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #38BDF8;
+}
+
+/* --- RIGHT ACTION BUTTON --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav-cta-btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #0B0B0F;
+  background: #38BDF8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+}
+
+.nav-cta-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* --- RESPONSIVE DOWN TO MOBILE --- */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+  .nav-menu {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    overflow-x: auto;
+  }
 }
